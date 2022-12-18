@@ -8,7 +8,7 @@ struct Stretch {
        * 示例1
        * 当设备的宽度增加或减少时，WIFI和开关始终在设备左右两端，并且中间的黄色块自动进行填充
        * */
-      //实现方案：使用Blank组件
+      //实现方案：容器Row + 组件Blank
       Row() {
         Text('WIFI')
           .fontSize(50)
