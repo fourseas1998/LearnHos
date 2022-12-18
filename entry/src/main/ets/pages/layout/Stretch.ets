@@ -4,7 +4,10 @@ struct Stretch {
   //自适应布局-拉伸能力
   build() {
     Column() {
-      //示例1：当设置的宽度增加或减少时，WIFI和开关始终在设备左右两端，并且中间的黄色块自动进行填充
+      /**
+       * 示例1
+       * 当设备的宽度增加或减少时，WIFI和开关始终在设备左右两端，并且中间的黄色块自动进行填充
+       * */
       //实现方案：使用Blank组件
       Row() {
         Text('WIFI')
@@ -21,6 +24,7 @@ struct Stretch {
        * 示例2
        * T1、T2、T3,默认宽度之和为1000。当设备宽度进行变化，T1、T2始终按照1:3的比例进行缩放，T3宽度始终不变
        * */
+      //实现方案1：容器Flex + 属性flexGrow + 属性flexShrink
       Flex() {
         Text('Flex-T1')
           .fontSize(50)
@@ -48,6 +52,7 @@ struct Stretch {
       }
       .height(100)
 
+      //实现方案2：容器Row + 属性flexGrow + 属性flexShrink
       Row() {
         Text('Row-T1')
           .fontSize(50)
@@ -82,6 +87,7 @@ struct Stretch {
        * 当设备宽度大于1000，多余的宽度，全部分配给T2，T1和T3的宽度不变
        * 当设备的宽度小于1000，T2的宽度不变，T1和T3的宽度按照1:1的比例进行缩小。
        * */
+      //实现方案：容器Flex + 属性flexGrow + 属性flexShrink
       Flex() {
         Text('T1')
           .fontSize(50)

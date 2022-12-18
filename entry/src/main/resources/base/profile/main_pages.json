@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/layout/stretch"
+    "pages/layout/Stretch",
+    "pages/layout/Equalization"
   ]
 }
